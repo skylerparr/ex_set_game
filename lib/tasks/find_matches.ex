@@ -2,10 +2,10 @@ defmodule Mix.Tasks.FindMatches do
   use Mix.Task
 
   def run(_) do
-    Deck.new |> find_matches
+    matches = SetGame.play
+    Enum.each(matches, fn(match) ->
+      IO.inspect match
+    end)
   end
 
-  defp find_matches(cards) do
-    
-  end
 end
