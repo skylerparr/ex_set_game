@@ -1,6 +1,6 @@
 # SetGame
 
-**TODO: Add description**
+Plays and solves the set game [https://en.wikipedia.org/wiki/Set_(game)] in Elixir
 
 ## Installation
 
