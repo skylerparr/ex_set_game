@@ -11,7 +11,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :open, color: :green},
       %Card{number: :three, symbol: :oval, shading: :open, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be considered a set if all 3 cards have the same numbers" do
@@ -20,7 +20,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :one, symbol: :squiggle, shading: :striped, color: :green},
       %Card{number: :one, symbol: :oval, shading: :open, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be consided a set if all 3 cards have the same symbols" do
@@ -29,7 +29,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :oval, shading: :striped, color: :green},
       %Card{number: :one, symbol: :oval, shading: :open, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be consided a set if all 3 cards have unique symbols" do
@@ -38,7 +38,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :striped, color: :green},
       %Card{number: :one, symbol: :squiggle, shading: :open, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be consided a set if all 3 cards have the same shading" do
@@ -47,7 +47,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :open, color: :green},
       %Card{number: :one, symbol: :oval, shading: :open, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be consided a set if all 3 cards have unique shading" do
@@ -56,7 +56,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :solid, color: :green},
       %Card{number: :one, symbol: :oval, shading: :open, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be consided a set if all 3 cards have the same color" do
@@ -65,7 +65,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :open, color: :red},
       %Card{number: :one, symbol: :oval, shading: :solid, color: :red}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should be consided a set if all 3 cards have unique color" do
@@ -74,7 +74,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :open, color: :green},
       %Card{number: :one, symbol: :oval, shading: :solid, color: :purple}
     ]
-    assert CardMatches.evaluate(cards)
+    assert CardMatches.match?(cards)
   end
 
   test "should not be a set if no other conditions are met" do
@@ -83,7 +83,7 @@ defmodule SetGame.CardMatchesTest do
       %Card{number: :two, symbol: :diamond, shading: :open, color: :green},
       %Card{number: :one, symbol: :oval, shading: :solid, color: :green}
     ]
-    assert CardMatches.evaluate(cards) == false
+    assert CardMatches.match?(cards) == false
 
   end
 

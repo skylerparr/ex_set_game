@@ -1,7 +1,7 @@
 defmodule SetGame.CardMatches do
   alias SetGame.Deck.Card
 
-  def evaluate(cards) do
+  def match?(cards) do
     cards |> Enum.map(&to_tuple/1) |> Enum.sort |> eval
   end
 
