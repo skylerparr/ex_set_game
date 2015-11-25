@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.FindMatches do
+defmodule Mix.Tasks.FindSets do
   use Mix.Task
 
   def run(_) do

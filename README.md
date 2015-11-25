@@ -4,4 +4,4 @@ Plays and solves the [set game ](https://en.wikipedia.org/wiki/Set_(game)) in El
 
 ## Run 
 
-    mix find_matches
+    mix find_sets
