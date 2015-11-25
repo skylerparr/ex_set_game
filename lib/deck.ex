@@ -7,7 +7,7 @@ defmodule SetGame.Deck do
   def new do
     for number <- numbers, symbol <- symbols, shading <- shadings, color <- colors do
       %Card{number: number, symbol: symbol, shading: shading, color: color}
-    end 
+    end |> Enum.shuffle
   end
 
   defp numbers, do: [:one, :two, :three]
