@@ -25,9 +25,9 @@ defmodule SetGame.CardMatchesTest do
 
   test "should be consided a set if all 3 cards have the same symbols" do
     cards = [
-      %Card{number: :one, symbol: :oval, shading: :solid, color: :red},
+      %Card{number: :one, symbol: :oval, shading: :solid, color: :green},
       %Card{number: :two, symbol: :oval, shading: :solid, color: :red},
-      %Card{number: :one, symbol: :oval, shading: :open, color: :purple}
+      %Card{number: :three, symbol: :oval, shading: :solid, color: :purple}
     ]
     assert CardMatches.match?(cards)
   end
